@@ -1,0 +1,8 @@
+* {box-sizing: border-box; }
+body {
+    font-family: system-uni, -apple-system, Roboto, Ariel, sans-serif;
+    background: #f7f7fb;
+    color: #222;
+    margin: 0;
+    line-height: 1.5;
+}
