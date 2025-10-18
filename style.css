@@ -52,3 +52,14 @@ button:hover { background: #2563eb; }
     border-radius: 8px; 
     padding: 10px;
 } 
+#tooltip {
+    position: absolute;
+    background: #111827; 
+    color: white; 
+    padding: 6px; 
+    border-radius: 6px; 
+    font-size: 0.85rem; 
+    pointer-events: none; 
+    transform: translate(8px, -8px); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
