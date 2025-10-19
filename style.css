@@ -1,30 +1,43 @@
 * {box-sizing: border-box; }
 body {
-    font-family: system-uni, -apple-system, Roboto, Ariel, sans-serif;
-    background: #f7f7fb;
-    color: #222;
     margin: 0;
-    line-height: 1.5;
+    background: var(--bg);
+    color: var(--text);
+    font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    
 }
 .container {
     max-width: 720px;
-    margin: auto;
-    padding: 24px;
+    margin: 48px auto;
+    padding: 0 20px;
 } 
-h1 { margin-top: 0; } 
 
-.field {
-    margin-bottom: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+h1 { margin:0 0 16px; font-size: 32px;}
+h2 { margin: 28px 0 12px; font-size: 22px;}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px; 
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
 }
-label {font-weight: 600;} 
 
+.field { margin-bottom: 14px; }
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+    
 input, textarea {
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    width: 100%;
+    padding: 10px 12px; 
+    border: 1px solid #cfd3d8;
+    border-radius: 10px;
+    background: #fff;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+}
+input:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59,130,246,.15)
 }
 input:focus, textarea:focus {
     border-color: #3b82f6;
@@ -32,34 +45,35 @@ input:focus, textarea:focus {
     outline: none;
 }
 button {
-    padding: 10px 14px; 
-    background: #3b82f6;
-    border: none; 
-    border-radius: 8px;
-    color: white;
-    font-weight: 600;
+    display: incline-block; 
+    padding: 10px 16px;;
+    border: 0; 
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
     cursor: pointer;
 }
 button:hover { background: #2563eb; }
 
-.error { color: #b91c1c; min-height: 1em;}
-.muted { color: #6b7280; font-size: 0.9rem;}
+.error { color: var(--danger); margin: 6px 0 0; min-height: 1em;}
+.muted { color: var(--muted); font-size: .9rem;}
 
-.stack { display: grid; gap: 10px; margin-top: 10px;}
-.feedback-card {
-    background: white;
-    border: 1px solid #e5e7eb; 
-    border-radius: 8px; 
-    padding: 10px;
+.stack { display: grid; gap: 10px;}
+.stack > div {
+    background: #fff;
+    border: 1px solid var(--border); 
+    border-radius: 10px; 
+    padding: 10px 12px;
 } 
 #tooltip {
     position: absolute;
     background: #111827; 
     color: white; 
     padding: 6px; 
-    border-radius: 6px; 
+    border-radius: 8px; 
     font-size: 0.85rem; 
     pointer-events: none; 
     transform: translate(8px, -8px); 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
