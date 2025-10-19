@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Project 01 -DOM & Events </title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
    <main class ="container"></main> <script src="cp_1.js" defer></script>
@@ -14,14 +15,21 @@
 <form id="feedback-form"> novalidate>
     <div class="field"
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" data-tip="Enter your full name" />
-        <p class="error-message" id="email-error"<>/p>
+        <input id="name" name="name" type="text" placeholder="Isabella Miranda" data-tip="Enter your full name" />
+        <p class="error" id="name-error" aria-live="polite"></p>
     </div> 
 <div class="field">
-    <label for "comments">Comments</label>      
-    <textarea id="comments" name="comments" rows="4" data-tip="Let us know what you think"></textarea>
+    <label for="email">Email</label>      
+    <input id="email" name="email" type="email" placeholder="ifmiranda@usf.edu" data-tip="We won't be sharing this." />
     <div class="muted">span id="char-count">0</span> characters</div>
-    <p class="error-message" id="comments-error"></p>
+    <p class="error" id="email-error" aria-live="polite"></p>
+</div>
+
+<div class="filed"
+<label for ="comments">Comments</label>
+<textarea id="comments" name="comments" rows="4" placeholder="Your feedback is important to us!" data-tip="Share your thoughts."></textarea>
+<div class="muted"><span id="char-count">0</span> characters</div>
+<p class="error" id="comments-error" aria-live="polite"></p>
 </div>
 
 <button id="Submit-button" type="submit">Submit</button>
